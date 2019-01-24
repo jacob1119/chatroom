@@ -108,7 +108,7 @@ func HandleConn(conn net.Conn) {
 
 		case <- hasData:
 
-		case <- time.After(10*time.Second): // 超时时间
+		case <- time.After(3600*time.Second): // 超时时间
 			delete(onlineMap, cliAddr) // 当前用户从map中移除
 			message <- MakeMsg(cli, "has been leave!!!  because time out!! please be more behavior")
 			return
