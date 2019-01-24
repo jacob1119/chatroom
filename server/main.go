@@ -126,7 +126,7 @@ func WriteMsgToClient(cli Client, conn net.Conn) {
 
 func main() {
 	// 监听
-	listener, err := net.Listen("tcp", "0.0.0.0:8000")
+	listener, err := net.Listen("tcp", "0.0.0.0:80")
 	if err != nil {
 		fmt.Println("net.Listen err = ", err)
 		return
